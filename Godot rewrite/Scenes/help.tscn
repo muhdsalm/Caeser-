@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://res/fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scenes/help.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color( 0, 1, 0, 1 )
+margin_right = 513.0
+margin_bottom = 352.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Did you know that
+Discord tracks you?
+Me neither. However, a quick search through YouTube reveals that that is the case. Of course, believing whatever you hear on YouTube is not a good idea, but it got me thinking: How do we know WHO is tracking or not? Of course, Discord may not track me, but it may...
+
+However, the answer is easy. What if we ENCRYPTED our message? Then, neither Discord nor anybody would be able to read it. Nobody, except who we want to talk to.
+There are a lot of encryption apps on the internet, but they all focus on changing the bits (the 0s and 1s) of files, meaning to chat you will have to send files. Which isn't very efficient.
+So I made Caesar++. This is a program that changes and scrambles the letters in a message to hide it's contents.
+
+To learn how to use this program, click 'Next'"
+
+[node name="BackButton" type="Button" parent="RichTextLabel"]
+margin_left = 305.0
+margin_top = 1.0
+margin_right = 415.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 2 )
+text = "< Back"
+
+[node name="NextButton" type="Button" parent="RichTextLabel"]
+margin_left = 410.0
+margin_top = 1.0
+margin_right = 520.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 2 )
+text = "Next >"
+
+[connection signal="button_down" from="RichTextLabel/BackButton" to="." method="_on_BackButton_button_down"]
+[connection signal="button_down" from="RichTextLabel/NextButton" to="." method="_on_NextButton_button_down"]

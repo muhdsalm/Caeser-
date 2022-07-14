@@ -112,6 +112,7 @@ custom_fonts/font = SubResource( 4 )
 text = "Special thanks to Kiranshatry, IconKahan and Muhammad Ali for the icons"
 
 [node name="OpenKeyFileDialog" type="FileDialog" parent="."]
+modulate = Color( 0, 1, 0, 1 )
 margin_left = 42.0
 margin_top = 40.0
 margin_right = 469.0
@@ -122,10 +123,11 @@ dialog_text = "Hi"
 mode_overrides_title = false
 mode = 0
 access = 2
-current_dir = "/var/home/ali/git/Caeser-/Godot rewrite"
-current_path = "/var/home/ali/git/Caeser-/Godot rewrite/"
+current_dir = "/home/muhdsalm/Downloads/Caeser--main/Godot rewrite"
+current_path = "/home/muhdsalm/Downloads/Caeser--main/Godot rewrite/"
 
 [node name="CreateKeyFileDialog" type="FileDialog" parent="."]
+modulate = Color( 0, 1, 0, 1 )
 margin_left = 16.0
 margin_top = 36.0
 margin_right = 496.0
@@ -134,8 +136,8 @@ rect_min_size = Vector2( 150, 52.5 )
 window_title = "Choose the key's location"
 mode_overrides_title = false
 access = 2
-current_dir = "/var/home/ali/git/Caeser-/Godot rewrite"
-current_path = "/var/home/ali/git/Caeser-/Godot rewrite/"
+current_dir = "/home/muhdsalm/Downloads/Caeser--main/Godot rewrite"
+current_path = "/home/muhdsalm/Downloads/Caeser--main/Godot rewrite/"
 
 [connection signal="button_down" from="Help/Button" to="." method="_on_Button_button_down"]
 [connection signal="button_down" from="LoadKeyButton/LoadKeyButton" to="." method="_on_LoadKeyButton_button_down"]

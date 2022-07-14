@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://res/fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scenes/help.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color( 0, 1, 0, 1 )
+margin_right = 513.0
+margin_bottom = 352.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "The first thing you see 
+when you start Ceaser++ 
+is a prompt asking to create or load a key file. This is basically a file that holds a secret combination that will scramble and unscramble the message, and should not be shared with ANYBODY except who you talk to. In fact, don't even email it, because it can be stolen by a hacker (or Google).
+The best way to give someone the key file is to exchange a USB secretly in a deserted park. If that's not possible, then in a password-protected zip file. Set the password to something personal that you are confident ONLY the other person knows. DO NOT put birthday dates, your pet's name or your passport number, because they may not be as secret as you think (Except for the passport number. It's probably safe, but it is hard to remember). For example, the location that you first met. Of course, tell the other person on chat that it's the first place you met. Of course, if you told that place to other people, it's not secret. In that case, don't use it. 
+Get creative!
+
+Once you have loaded the key file (or created it, if it's the first time) you type your message in the upper box, where the scrambled message will automatically appear in the lower box. Once you've copied your message, you can paste it in the chat app, then send it.
+NOTE: If you are on Discord, use the 'Copy for Discord' button instead. This is because discord's formatting ruins the message, so the 'Copy for discord' copies it in a format that fixes the issue.
+
+Below the second box is a tiny text helper who gently informs you if you're doing something wrong. It's not perfect, though, so it can make mistakes.
+
+Once you've copied your message, return to the window where it will be automatically unscrambled in a popup. This again, is prone to errors. Sometimes even if the text you copied is not an encrypted message, Ceaser++ thinks it is and will try decrypting it, resulting in nonsense.
+A very high intelligence checker would have been very slow, so I've put a less intelligent one. It still works wonders, though."
+
+[node name="Help2BackButton" type="Button" parent="RichTextLabel"]
+margin_left = 400.0
+margin_top = 1.0
+margin_right = 510.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 2 )
+text = "< Back"
+
+[connection signal="button_down" from="RichTextLabel/Help2BackButton" to="." method="_on_Help2BackButton_button_down"]
