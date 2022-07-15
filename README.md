@@ -12,3 +12,5 @@ So I developed Ceaser++. What I like to call the *stupidly simple encryption pro
 I hate people who just leave their source code so everyone has to build the program. So, you can download the program from the **releases** section at the right hand side of the page.
 
 ## Because privacy is something everyone is entitled to. Period.
+
+P.S.: The python file is just for reference. It's not part of the actual program
